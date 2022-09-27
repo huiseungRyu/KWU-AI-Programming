@@ -2,7 +2,7 @@ from turtle import*
 
 import turtle as t
 
-"""t.speed('fastest')"""
+t.speed('fastest')
 
 def oval(rad, div, pencolor, fillcolor, pensize):
     t.pensize(pensize)
@@ -68,19 +68,15 @@ t.goto(50,50)
 t.pendown()
 t.pensize(10)
 
-oval(50,2,"black", "blue", 5)
+oval(50,2,"black", "blue", 10)
 
 t.penup()
 t.home()
 t.goto(-150,50)
 t.pendown()
 
-oval(100,10,"black", "lightblue", 3)
-
-
+oval(90,15,"black", "lightblue", 3)
 
 t.hideturtle()
-
-
 
 t.done()
