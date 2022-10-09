@@ -25,4 +25,3 @@ plt.imshow(image)
 plt.show()
 
 driver.close()
-
