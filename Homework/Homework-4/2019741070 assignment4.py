@@ -12,7 +12,7 @@ from sklearn.preprocessing import MinMaxScaler
 drive.mount('/content/drive')
 df = pd.read_csv('./drive/MyDrive/Colab Notebooks/data/samsung.csv')
 
-#df= pd.get_dummies(df)
+df= pd.get_dummies(df)
 df= df.fillna(df.mean())
 
 df_corr = df.corr()
@@ -20,14 +20,6 @@ df_corr_sort = df_corr.sort_values('close', ascending=False)
 
 df_tgt = df[['start', 'high', 'low', 'volume', 'transactionPrice', 'capitalization']]
 
-"""
-scaler = MinMaxScaler()
-scaler1 = MinMaxScaler()
-scaler.fit(df_tgt)
-df[['start', 'high', 'low', 'volume', 'transactionPrice', 'capitalization']] = scaler.transform(df_tgt)
-scaler1.fit(df[['close']])
-df[['close']] = scaler1.transform(df[['close']])
-"""
 scaler = MinMaxScaler()
 scaler1 = MinMaxScaler()
 scaler1.fit(df[['close']])
